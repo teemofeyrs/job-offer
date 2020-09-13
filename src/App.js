@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import './App.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/Header/Header'
 /*import Home from './components/Content/contentElem/Home/Home'*/
 import Companies from './components/Content/contentElem/Companies/Companies'
@@ -60,7 +60,7 @@ class App extends React.PureComponent {
       return <Preloader/>
     }
     return (
-      <Router>
+      <HashRouter>
         <div className={'App'} onClick={({target}) => {this.setToggleSettings(target) }}>
           <Route path='/login' exact><AuthMe/></Route>
           <Header toggleSettings={this.state.toggleSettings}/>
@@ -88,7 +88,7 @@ class App extends React.PureComponent {
             </Switch>
           </div>
         </div>
-      </Router>
+      </HashRouter>
     )
   }
 }
