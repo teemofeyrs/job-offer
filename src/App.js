@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import './App.css'
-import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/Header/Header'
 /*import Home from './components/Content/contentElem/Home/Home'*/
 import Companies from './components/Content/contentElem/Companies/Companies'
